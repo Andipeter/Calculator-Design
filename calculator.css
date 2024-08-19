@@ -1,0 +1,27 @@
+/* .result {
+    width: 30vw;
+    height: 70px;
+    background-color: rgb(213, 213, 194);
+}
+.numberbox {
+    width: 30vw;
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    background-color: brown;
+    justify-content: center;
+    
+}
+.grid-item {
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    size: 20px;
+}
+.grid-item:hover {
+    color: black;
+    background-color: white;
+} */

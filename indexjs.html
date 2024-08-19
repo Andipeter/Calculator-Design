@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>Javascript page</title>
+</head>
+<body>
+    <h1> Test code </h1>
+    <p id="demo"> </p>
+    <button onclick='alert("Button clicked")'> Click Me </button>
+    <button id="click">Click Js</button>
+    <button id="calculate">Numbers</button>
+    <button id="details">Name</button>
+
+    <button id="try"> Division </button>
+
+    <script>
+        // "use strict"
+        let text1= 20;
+        let text2= 5;
+        let result = text1 < text2;
+        document.getElementById ("demo").innerHTML="Is A less than B? "+ result;
+        let firstName = true; 
+        console.log(typeof firstName);
+        let person = {
+            name: 'Andy Undie',
+            gender: "male",
+            age: 20,
+        }
+        console.log(person.name);
+        console.log(person.gender)
+        console.log(person.age)
+
+        //Named function
+        function add (){
+            let firstNumber = 40;
+            let secondNumber = 20;
+            let sum = firstNumber + secondNumber;
+            return sum;
+        }
+        console.log(add());
+        function addwithParameters (firstNum, secondNum){
+            //these are called arguments
+            let NumberOne = firstNum;
+            let NumberTwo = secondNum;
+            let sum = NumberOne + NumberTwo;
+            return sum;
+            
+        }
+        console.log(addwithParameters(30,56));
+        
+
+        function substract () {
+            let subNumber = 34;
+            let stractNumber = 50;
+            let minus = subNumber - stractNumber;
+            return minus;  
+        }
+        console.log (substract());
+        function subwithPara (numbOne, numbTwo){
+            let firstNumber = numbOne;
+            let secondNumber = numbTwo;
+            let minus = firstNumber - secondNumber;
+            return minus;
+        }
+        console.log(subwithPara(40,17));0
+
+        //Arrow function
+        let arrowfunction = ()=>{
+            let firstNumber = 70;
+            let secondNumber = 50;
+            let sum = firstNumber + secondNumber;
+            return sum;
+        }
+        console.log(arrowfunction());
+        let arrowParameters = (firstNum, secondNum)=> {
+            let NumberOne = firstNum;
+            let NumberTwo = secondNum;
+            let sum = NumberOne + NumberTwo;
+            return sum;
+        }
+        console.log(arrowParameters(9,12))
+
+        //function expression
+
+        let greet = function (){
+            console.log("Andy")
+        } 
+        greet()
+
+        //functionn expression with parameters
+        let create = function (firstnum, secondnum){
+        let Numberr = firstnum
+        let Numbery = secondnum
+        console.log(Numberr/Numbery)
+        }
+        create(15,3)
+
+        //using strings
+        let display = function(name1, name2){
+            console.log("The names are "+name1+" "+name2)
+        }
+        display("Andy","Joseph")
+
+        //function that accepts both string & integer
+        function AboutMe(name, Age){
+            console.log("My name is "+name+" "+"My Age is "+Age)
+        }
+        AboutMe("Andy",29)
+
+        //function that converts fahrenheit to celsius
+        function Tocelsius(fahrenheit){
+            let ConvertToCelsius = (5/9)*(fahrenheit-32)
+            return ConvertToCelsius
+        }
+        console.log(Tocelsius(120))
+
+        //Array
+        const namesOfStudents = ["Joseph","Andy","Clinton"]
+        console.log(namesOfStudents[0])
+
+       //Adding and removing items in an array
+        const namesOfPlaces = ["Goldie","Marian","Calabar","Mount-Zion","Unical", "Orok-Orok"]
+        console.log(namesOfPlaces[0])
+        namesOfPlaces.push("Ettagbor")
+        console.log(namesOfPlaces)
+        namesOfPlaces.pop()
+        console.log(namesOfPlaces)
+        //removing first element .shift
+        namesOfPlaces.shift()
+        console.log(namesOfPlaces)
+        //adding element to first of array
+        namesOfPlaces.unshift("Akim")
+        console.log(namesOfPlaces)
+        
+        
+        //remove and add element from a particular index using splice and slice
+        // const namesOfPlaces = ["Goldie","Marian","Calabar","Mount-Zion","Unical", "Orok-Orok"]
+        namesOfPlaces.splice(1,1,"Ekpo-Abasi")
+        console.log(namesOfPlaces)
+        namesOfPlaces.splice(2,2,"Efioette")
+        console.log(namesOfPlaces)
+        namesOfPlaces.slice(1,3)
+        console.log(namesOfPlaces)
+
+        //practice
+        let fruits = ["Apple","Banana","Pineapple"]
+        //To replace Apple and number you want to replace
+        fruits.splice(0,1,"Orange")
+        console.log(fruits)
+        //To display Only Banana, start from index 1 and end in index pineapple
+        console.log(fruits.slice(1,2))
+
+        //for modification henceforth in your code, reassign the array to the modified one
+        fruits = fruits.slice(1,2);
+
+        //to add element to the end of the array
+        fruits.push("Watermelon")
+        console.log(fruits)
+
+        //to remove element from the end of array
+        fruits.pop()
+        console.log(fruits)
+
+        //to remove element from the beginning of an array
+        fruits.shift ()
+        console.log(fruits)
+
+        //to add element to the beginning of an array
+        fruits.unshift("Blackberry")
+        console.log(fruits)
+
+        //concatation
+        const combinedArray = namesOfPlaces.concat(fruits)
+        console.log(combinedArray)
+        
+        //concatation of three arrays
+        const boys = ["okon","Etim"]
+        const girls = ["Atim","Ngozi"]
+        const men = ["Richard", "Awoke"]
+        const combo = boys.concat(girls,men)
+        console.log(combo)
+
+        //to combine arrays of themselves
+        const numbers = [
+            [1,2],
+            [3,4],
+            [5,6],
+        ]
+        console.log(numbers)
+        console.log(numbers.flat())
+
+        //checking length of array
+        console.log(fruits.length)
+        delete numbers[1]
+        console.log(numbers)
+
+        //combining arrays
+        const CombinedItemArray = [[1,2],[2,3],[3,4]]
+        const newArray = CombinedItemArray.flat()
+        console.log(newArray)
+
+        //using slice
+        const itemCount = [1,2,3,4,5,6]
+        const sliced = itemCount.slice(1,4)
+        console.log(sliced)
+
+        //indexof method
+        const fruit = ["Apple", "Banana", "Orange"]
+        console.log(fruit.indexOf("Banana"))
+
+        //include methode: Allows us to check if an element is present in an array
+        const IsApple = fruit.includes("Apples")
+        console.log(IsApple)
+
+        //find method: it returns a first element that satisfy a condition and also findindex returns index
+        const arrayNumbers = [5,10,20,25]
+        const Value = arrayNumbers.find((number,index)=>{
+            return number < 18;
+        }
+    )
+    console.log(Value) 
+
+    const FindIndex = arrayNumbers.findIndex((number, index)=>{
+        return number > 18;
+    }
+)
+console.log(FindIndex)
+
+//Sorting: Is arrangement of element in an orderly manner
+const nameOfFruits = ["mango", "apple", "paw-paw", "cucumber", "pear"]
+const sortedFruits = nameOfFruits.sort()
+console.log(sortedFruits)
+const reverseFruits = nameOfFruits.reverse()
+console.log(reverseFruits)
+const assendingFruits = nameOfFruits.sort().reverse()
+console.log(assendingFruits)
+
+ //array 1-20; filter method only even numbers 
+ const Numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+ const evenNumbers = Numbers.filter((number, index)=> {
+    return number%2==0;
+ }
+)
+console.log(evenNumbers)
+
+const isEvenCheck = 2%2==0
+console.log(isEvenCheck)
+
+//names of students in your set and find your name and index
+const studentNames = ["Esther","Undie","Clinton","Andy","Joseph","Daniel","Rowland"]
+const findName = studentNames.find((name,index)=>{
+            return name == "Andy";
+        }
+    )
+    console.log(findName) 
+
+const FindNameIndex = studentNames.findIndex((name,index)=>{
+        return name =="Andy";
+    }
+)
+console.log(FindNameIndex)
+
+// the .map function works on each item in an array
+const Realnumbers = [1,2,3,4,5,6,7,8,9,10]
+const eveNumbers = Realnumbers.filter((number,index)=>{
+    return number%2==0
+}
+)
+console.log(evenNumbers)
+const doubledNumbers = eveNumbers.map((number,index)=> {
+    return number * 2
+}
+)
+console.log(doubledNumbers)
+
+//ASSIGNMENT - sorting of numbers and finding the highest
+const randomNumbers = [4,5,9,14,25,44,50,32,19,70]
+const sortedNumbers =randomNumbers.sort((firstnumber, secondNumber)=> {
+    return firstnumber - secondNumber
+}
+)
+const highestElementArray = Math.max(...sortedNumbers);
+console.log (highestElementArray)
+
+const lowestElementArray = Math.min(...sortedNumbers);
+console.log(lowestElementArray)
+
+//using the spread method to combine arrays
+const array1 = [3,5,13,46,11]
+const array2 = [43,6,23,83,85,32]
+const concatArray = [...array1, ...array2]
+console.log(concatArray)
+
+//reduce method
+//the functions may include accumulator,currentValue,index, array)
+const sum = randomNumbers.reduce((sum,element)=>{
+    return sum = sum + element; 
+})
+  
+console.log(sum)
+        
+
+//OBJECTS
+//The names in an object is called properties
+const Car = {
+    name: "Lexus",
+    color: "Blue",
+    Model: "Lexus 350",
+    NoofSits:  4, 
+    nameofPersons: ["Andy","Esther"],
+    IsOn: false,
+    info: function(){
+        return "The name of Car is "+ this.name + "The color is "+ this.color +"THe model is " + this.Model + "The sits are "+ this.NoofSits + "is the car on "+this.IsOn 
+}
+}
+console.log(Car)
+//to access a particular property
+console.log(Car.name)
+console.log(Car.info())
+//another way to access property of object
+console.log(Car["name"])
+//to add a property
+Car.size = "Big"
+console.log(Car)
+//to delete a property
+delete Car.size 
+console.log(Car)
+//adding another object
+Car.myCarname = {
+    car1: "Benz",
+    car2: "Corolla",
+    car3: "Camry",
+}
+console.log(Car)
+//to access benz
+console.log(Car.myCarname.car1)
+Car.uppercase = function(){
+    return this.name.toUpperCase() + "  " + this.color.toUpperCase()
+
+}
+console.log(Car.uppercase())
+
+//findind an array in an object
+const house = {
+    color: "brown",
+    type: "duplex",
+    noofRooms: 50,
+    RoomsInHouse: ["kitchen","sittingroom","ante-room"]
+}
+const objectArray = house.RoomsInHouse 
+const andy = objectArray.find((item,index)=>{
+    return item ==="ante-room";
+}
+)
+console.log(andy)
+
+//.value returns all values in an object as an array
+const myArray = Object.values(house)
+console.log(myArray)
+
+//EVENTS
+//Ways to add event in js 
+//(1)Directly on the html 
+//(2) By using the function below on the js
+
+//for click button
+        let button = document.getElementById("click");
+        button.addEventListener("click",()=>{
+            alert("Js Button clicked");
+        }
+        )
+
+        //for calculate button
+        let calbutton = document.getElementById("calculate")
+    calbutton.addEventListener("click",()=>{
+        let num1 = prompt("Enter the first Name");
+        num1 = Number(num1)
+        let num2 = prompt ("Enter the second number")
+        num2 = Number(num2)
+        let sum = num1+num2;
+        alert ("The sum of "+num1 + "  " + " and "+ num2 +" is "+sum);
+        }
+        )
+
+    //event are tins dat happen to html elements. When js are used on html pages. some includes: unchange,onclick,onmousehover,onmouseout,onkeydown,onload
+    
+    //create an eventlistener that displays ur fname, lastname and age
+        let profile = document.getElementById("details")
+        profile.addEventListener("click",()=>{
+            let fname = prompt("Enter your first name")
+            let lname = prompt("Enter last name")
+            let age = prompt("Enter your age")
+            age = Number(age)
+            //let year = age
+            // alert ("My name is " + fname + " "+ lname + " and my Age is "+ age)
+            alert (`my name is ${fname}, ${lname} my age is ${age}`)
+        }
+    )
+    //estracting string parts
+    //using charAt
+    let name = "Esther"
+    console.log(name.length)
+    console.log(name.charAt(0))
+
+    //using slice
+    // let est = name.slice(0,3)
+    // console.log(est)
+    console.log(name.slice(0,4))
+
+    //using substring
+    console.log(name.substring(0,4))
+
+    //using substr
+    let greetings = "Hello World"
+    let hello = greetings.substr(6,5)
+    console.log(hello)
+
+    const start = "Count down"
+    const shorten = start.substr(6,5)
+    console.log(shorten)
+
+    //to change to uppercase
+    const myName = "esther"
+    console.log(myName.toUpperCase())
+
+    //to replace text in a string
+    const text = "Please visit mySchool"
+    let newtext = text.replace("mySchool", "Bigstack")
+    console.log(newtext)
+    console.log(text.search("visit"))
+    console.log(text.includes("visit"))
+    console.log(text.startsWith("Please"))
+    console.log(text.endsWith("mySchool"))
+
+    //change number to string and vise versa
+    let num3 = "28"
+    num3 = parseInt(num3)
+    console.log(typeof num3)
+
+    let word = 234
+    word = word.toString()
+    console.log(typeof word)
+
+    //CONDITIONAL STATEMENTS: are used to make conditions
+    //(1) IF
+    let age = 20 
+    if (age>=30) {
+        console.log("By a Car")
+    }
+    //(2)ELSE
+    let votersAge = 18;
+    if (votersAge<18){
+        console.log("You are not eligible vote");
+    }
+    else {
+        console.log("You are eligible to vote")
+    }
+    //(3)else if
+    let name1 = "David"
+    if (name1==="Andy") {
+        console.log(name1+"is a good boy")
+    }
+    else if (name1==="Esther"){ 
+        console.log (name1+"is a good girl")
+    } else 
+    {console.log("We are good Students")}
+
+    //(4) switch
+    let day = 4;
+    switch(day){
+        case 1: 
+            console.log("Today is Monday");
+            break;
+        case 2: 
+            console.log("Today is Tuesday");
+            break;
+        case 3:
+            console.log("Today is Wednesday")
+            break;
+        case 4: 
+            console.log("Today is Thursay")
+            break;
+        case 5: 
+            console.log("Today is Friday")
+            break;
+        default:
+            console.log("Today is weekend")
+    }
+
+    if (day===1){
+        console.log("Today is Monday")}
+    else if (day===2){
+        console.log("Today is Tuesday")
+    }
+    else if (day===3){
+        console.log("Today is Wednesday")
+    }
+    else if (day===4){
+        console.log("Today is Thursday")
+    }
+    else if (day===5){
+        console.log("Today is Friday")
+    }
+    else {console.log("Today us weekend")}
+    
+     //else if classwork
+     let month = 6;
+    if (month=== 6){
+            console.log("This is June")}
+    else if (month === 2) {
+            console.log("This is February");
+            }
+    else {console.log("The end has come")}
+
+    //LOOPs: Exevuting codes a specific number of times
+    //(1)for loop, (2) while loop, (3) do while loop 
+    //for(initialization, condition, increment/decrement){body of execution}
+
+    for (let number =1; number<10; number++){
+        console.log(number)
+    }
+    
+    //looping objects mostlt uses for in
+    const people = {
+        name: "Andy",
+        age: 55
+    }
+    for (x in people){
+        console.log(people[x])
+    }
+    //for off mostly used in arrays
+    const cars = ["corrola","Ford","Lexus"]
+    for (x of cars){ 
+        console.log(x)
+    }
+    //assignment: use a .map on the above case
+    //while loop
+    age = 1
+    while (age<10){
+        console.log("I am " +age + " years old"); age++;
+    }
+    //do while loop
+    let frequency = 10;
+    do {
+        console.log("my current frequency " +frequency); frequency++ 
+    }
+    while (frequency<10)
+
+    //assignment: use a for loop to populate an array with numbers from 1 to 100
+    //write a function that takes an array of numbers and returns a new array with each numbers squared
+
+    let emptyArray = []
+
+    for (let i=1; i<=100; i++){
+        emptyArray.push(i)
+    }
+    console.log(emptyArray)
+
+    //second question
+    function arraySquared (arrayItem){
+        const newArray = [];
+        for (i=0; i<arrayItem.length; i++){
+            newArray.push(arrayItem[i]*2)
+        }
+        return newArray
+    }
+    const numberss = [2,4,6,8,10,12];
+    console.log(arraySquared(numberss))
+
+    //Break and continue
+    for (let i=5; i<10; i++){
+        if (i===8){
+            continue;
+        }
+        console.log(i)
+    }
+    //set: it only takes unique items
+    const array = ["a","a","a"]
+    console.log(array)
+    const letters = new Set(["a","a","a","b"])
+    console.log(letters) 
+    //to add item to a set use .add
+    //to check if an item exist in an array
+    //.clear: to remove all elements
+    //.size() returns the number of elements in a set
+    //.delete(the element) to delete element from a set 
+    console.log(letters.has("d"))
+    
+    //Regular Expression
+    // /pattern/modifier e.g of modifier is i
+
+    //to find
+    let texts = "visit Bigstack"
+    let n = texts.search(/Bigstack/i)
+
+    console.log(n)
+
+    //to modify
+    let sentence = "Esther came to class today"
+    let modifiedtext = sentence.replace(/esther/i,"Andy");
+    console.log(modifiedtext)
+
+    pattern = /e/
+    let test = pattern.test("The best things in life are free!");
+    console.log(test)
+
+    let calc = 10+5*2;
+    console.log(calc)
+    let calc2 = (10+5)*2;
+    console.log(calc2)
+
+    pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    let tesmail = pattern.test("andyudo@gmail.com");
+    console.log(tesmail)
+
+    
+        let dividebutton = document.getElementById("try")
+    dividebutton.addEventListener("click",()=>{
+        let numerator = prompt("Enter the first Number");
+        numerator = Number(numerator)
+        let denominator = prompt ("Enter the second number")
+        denominator = Number(denominator)
+        let divide = numerator/denominator
+        try {
+        if (denominator===0){
+            throw new Error("cannot be divided by zero"); 
+        }
+        else {
+            alert("The answer is "+divide)
+
+        }
+    }
+    catch(error) {
+            console.log("Error was encountered " + error.message)
+            alert(error)
+        }
+    finally {
+            alert("Enter new number");
+        }
+    })
+       
+    //Js scope
+    //function scope
+    //global scope
+
+    let num2=5
+    function addNumbers(){
+        let num1 = 2; 
+        console.log("From inside the fucntion");
+        console.log(num2);
+        return num1+num2;             
+    }
+    addNumbers();
+    console.log(num2)
+    
+    //Hoisting
+    let Carname;
+    Carname = "volvo" 
+    console.log(Carname)
+   
+    // let x = 3.14
+    // console.log(x)
+
+    //this keyword
+    person = {
+        name: "Victor",
+        age: 5,
+        aboutPerson: function (){
+            console.log("Myname is " +this.name + " my age is " +this.age)
+        }
+    }
+    person.aboutPerson()
+    
+    //arrow function
+    let myNames = ()=> {
+        console.log("My name is Andy")
+    }
+    myNames();
+
+    let twoNumbers = (firsNum, seconNum)=>{
+        let add = firsNum / seconNum
+        console.log(add)
+    }
+    twoNumbers(4,7)
+    
+    class Cars {
+         name;
+         year;
+         constructor(name,year){
+            this.name = name;
+            this.year = year
+         }
+
+    }
+
+    const andyCar = new Cars ("Lexus", 2024);
+    console.log(andyCar);
+    console.log(andyCar.year);
+    
+    </script>
+</body>
+</html>
